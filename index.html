@@ -23,7 +23,7 @@
 
       <nav class="nav-links">
         <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
-        <a href="#preview" data-i18n="nav.documents">Aperçu</a>
+        <a href="#preview" data-i18n="nav.preview">Aperçu</a>
         <a href="#download" data-i18n="nav.download">Télécharger</a>
       </nav>
 
@@ -61,14 +61,14 @@
           <span class="btn-icon">📥</span>
           <div class="btn-text">
             <span class="btn-main" data-i18n="hero.downloadExe">Télécharger pour Windows</span>
-            <span class="btn-sub">Setup.exe · 8.9 Mo · Gratuit</span>
+            <span class="btn-sub" data-i18n="hero.downloadExeSub">Setup.exe · 8.9 Mo · Gratuit</span>
           </div>
         </a>
         <a href="#download" class="btn btn-hero btn-hero-secondary">
           <span class="btn-icon">⚙️</span>
           <div class="btn-text">
             <span class="btn-main" data-i18n="hero.otherVersions">Autres formats</span>
-            <span class="btn-sub">MSI Entreprise & Portable</span>
+            <span class="btn-sub" data-i18n="hero.otherVersionsSub">MSI Entreprise & Portable</span>
           </div>
         </a>
       </div>
@@ -98,15 +98,15 @@
           <div class="mockup-dots">
             <span></span><span></span><span></span>
           </div>
-          <div class="mockup-title">AI Widget — Mode Étendu (ChatGPT-Style)</div>
-          <div class="mockup-badge">✓ Modèle Qwen 2.5 Local Actif</div>
+          <div class="mockup-title" data-i18n="mockup.title">AI Widget — Mode Étendu (ChatGPT-Style)</div>
+          <div class="mockup-badge" data-i18n="mockup.badge">✓ Modèle Qwen 2.5 Local Actif</div>
         </div>
         <div class="mockup-body">
           <div class="mockup-chat">
             <div class="chat-msg user">
               <div class="msg-avatar">👤</div>
               <div class="msg-bubble">
-                <div class="msg-chip">📎 Devis 40 logts.xlsx (XLSX)</div>
+                <div class="msg-chip" data-i18n="mockup.userChip">📎 Devis 40 logts.xlsx (XLSX)</div>
                 <div data-i18n="mockup.userMsg">Peux-tu extraire le montant total HT et TTC de ce devis Excel ?</div>
               </div>
             </div>
@@ -117,27 +117,27 @@
                 <table class="mockup-table">
                   <thead>
                     <tr>
-                      <th>Désignation</th>
-                      <th>Montant HT</th>
-                      <th>Taux TVA</th>
-                      <th>Total TTC</th>
+                      <th data-i18n="mockup.th1">Désignation</th>
+                      <th data-i18n="mockup.th2">Montant HT</th>
+                      <th data-i18n="mockup.th3">Taux TVA</th>
+                      <th data-i18n="mockup.th4">Total TTC</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Lot Gros Œuvre</td>
+                      <td data-i18n="mockup.row1_desc">Lot Gros Œuvre</td>
                       <td>120 450,00 €</td>
                       <td>20%</td>
                       <td>144 540,00 €</td>
                     </tr>
                     <tr>
-                      <td>Lot Électricité & CVC</td>
+                      <td data-i18n="mockup.row2_desc">Lot Électricité & CVC</td>
                       <td>45 200,00 €</td>
                       <td>20%</td>
                       <td>54 240,00 €</td>
                     </tr>
                     <tr class="highlight-row">
-                      <td><strong>MONTANT GLOBAL</strong></td>
+                      <td><strong data-i18n="mockup.total_label">MONTANT GLOBAL</strong></td>
                       <td><strong>165 650,00 €</strong></td>
                       <td>-</td>
                       <td><strong style="color:#059669;">198 780,00 € TTC</strong></td>
@@ -213,33 +213,33 @@
         <div class="download-card primary">
           <div class="download-badge" data-i18n="download.recommended">Recommandé</div>
           <img src="icon.png" alt="Setup" class="download-card-img" />
-          <h3 class="download-card-title">Installateur Standard</h3>
-          <p class="download-card-desc">Installation automatique avec raccourcis bureau et menu démarrer.</p>
+          <h3 class="download-card-title" data-i18n="download.setupTitle">Installateur Standard</h3>
+          <p class="download-card-desc" data-i18n="download.setupDesc">Installation automatique avec raccourcis bureau et menu démarrer.</p>
           <div class="download-file-info">AI-Widget-Setup.exe · 8.9 Mo</div>
           <a href="https://github.com/ShaDevPro/AiWidget/releases/download/v1.0.1/AI-Widget-Setup.exe" class="btn btn-primary btn-block">
-            <span>📥 Télécharger (.exe)</span>
+            <span data-i18n="download.btnExe">📥 Télécharger (.exe)</span>
           </a>
         </div>
 
         <!-- MSI -->
         <div class="download-card">
           <div class="download-card-icon">🏢</div>
-          <h3 class="download-card-title">Pack Entreprise (MSI)</h3>
-          <p class="download-card-desc">Idéal pour les administrateurs système et déploiements réseau (GPO / SCCM).</p>
+          <h3 class="download-card-title" data-i18n="download.msiTitle">Pack Entreprise (MSI)</h3>
+          <p class="download-card-desc" data-i18n="download.msiDesc">Idéal pour les administrateurs système et déploiements réseau (GPO / SCCM).</p>
           <div class="download-file-info">AI-Widget-Setup.msi · 5.2 Mo</div>
           <a href="https://github.com/ShaDevPro/AiWidget/releases/download/v1.0.1/AI-Widget-Setup.msi" class="btn btn-secondary btn-block">
-            <span>📦 Télécharger (.msi)</span>
+            <span data-i18n="download.btnMsi">📦 Télécharger (.msi)</span>
           </a>
         </div>
 
         <!-- Portable -->
         <div class="download-card">
           <div class="download-card-icon">🚀</div>
-          <h3 class="download-card-title">Version Portable</h3>
-          <p class="download-card-desc">Exécutable autonome sans aucune installation requise. Clé USB ready.</p>
+          <h3 class="download-card-title" data-i18n="download.portableTitle">Version Portable</h3>
+          <p class="download-card-desc" data-i18n="download.portableDesc">Exécutable autonome sans aucune installation requise. Clé USB ready.</p>
           <div class="download-file-info">AI-Widget-Portable.exe · 21.7 Mo</div>
           <a href="https://github.com/ShaDevPro/AiWidget/releases/download/v1.0.1/AI-Widget-Portable.exe" class="btn btn-secondary btn-block">
-            <span>📂 Télécharger Portable</span>
+            <span data-i18n="download.btnPortable">📂 Télécharger Portable</span>
           </a>
         </div>
       </div>
@@ -254,10 +254,10 @@
           <img src="icon.png" alt="AI Widget Logo" class="brand-logo-img" />
           <span class="brand-name">AI Widget</span>
         </div>
-        <p class="footer-tagline">Conçu avec passion par <strong>S.H.A dev</strong>. Tous droits réservés 2026.</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Conçu avec passion par <strong>S.H.A dev</strong>. Tous droits réservés 2026.</p>
       </div>
       <div class="footer-links">
-        <a href="mailto:s.h.a.dev.pro@gmail.com" class="footer-contact-link">📧 Support & Contact : s.h.a.dev.pro@gmail.com</a>
+        <a href="mailto:s.h.a.dev.pro@gmail.com" class="footer-contact-link" data-i18n="footer.contact">📧 Support & Contact : s.h.a.dev.pro@gmail.com</a>
       </div>
     </div>
   </footer>
