@@ -279,9 +279,37 @@ function setLanguage(lang) {
   });
 }
 
+// Language selector events
 document.querySelectorAll('.lang-btn').forEach((btn) => {
   btn.addEventListener('click', () => {
     const lang = btn.getAttribute('data-lang');
     setLanguage(lang);
   });
 });
+
+// Mobile Hamburger Menu Logic
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const iconMenu = mobileMenuBtn?.querySelector('.icon-menu');
+const iconClose = mobileMenuBtn?.querySelector('.icon-close');
+
+if (mobileMenuBtn && mobileMenu) {
+  mobileMenuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    if (iconMenu && iconClose) {
+      iconMenu.style.display = isOpen ? 'none' : 'block';
+      iconClose.style.display = isOpen ? 'block' : 'none';
+    }
+  });
+
+  // Close menu when clicking on any mobile nav link
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      if (iconMenu && iconClose) {
+        iconMenu.style.display = 'block';
+        iconClose.style.display = 'none';
+      }
+    });
+  });
+}
