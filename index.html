@@ -24,6 +24,7 @@
       <nav class="nav-links">
         <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
         <a href="#preview" data-i18n="nav.preview">Aperçu</a>
+        <a href="#editions" data-i18n="nav.editions">Éditions & Licences</a>
         <a href="#download" data-i18n="nav.download">Télécharger</a>
       </nav>
 
@@ -64,11 +65,11 @@
             <span class="btn-sub" data-i18n="hero.downloadExeSub">Setup.exe · 8.9 Mo · Gratuit</span>
           </div>
         </a>
-        <a href="#download" class="btn btn-hero btn-hero-secondary">
-          <span class="btn-icon">⚙️</span>
+        <a href="#editions" class="btn btn-hero btn-hero-secondary">
+          <span class="btn-icon">👑</span>
           <div class="btn-text">
-            <span class="btn-main" data-i18n="hero.otherVersions">Autres formats</span>
-            <span class="btn-sub" data-i18n="hero.otherVersionsSub">MSI Entreprise & Portable</span>
+            <span class="btn-main" data-i18n="hero.seeEditions">Découvrir les Éditions</span>
+            <span class="btn-sub" data-i18n="hero.seeEditionsSub">Standard · LITE · PRO Entreprise</span>
           </div>
         </a>
       </div>
@@ -195,6 +196,95 @@
           <div class="feature-icon">👑</div>
           <h3 class="feature-title" data-i18n="f6.title">Licence & Multi-Profils Sécurisés</h3>
           <p class="feature-desc" data-i18n="f6.desc">Gestion des profils isolés, chiffrement SQLite local et activation à vie sans abonnement mensuel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editions & Pricing Section -->
+  <section class="editions-section" id="editions">
+    <div class="container">
+      <div class="section-header">
+        <div class="hero-tag" style="background:#eff6ff;border-color:#bfdbfe;color:#2563eb;">
+          <span data-i18n="editions.badge">💎 Gamme Complète</span>
+        </div>
+        <h2 class="section-title" data-i18n="editions.title">Choisissez l'Édition Adaptée à Vos Besoins</h2>
+        <p class="section-desc" data-i18n="editions.desc">De l'usage personnel quotidien au déploiement d'entreprise à grande échelle.</p>
+      </div>
+
+      <div class="editions-grid">
+        <!-- 1. Standard Free -->
+        <div class="edition-card">
+          <div class="edition-header">
+            <div class="edition-icon">⚡</div>
+            <h3 class="edition-name" data-i18n="editions.freeTitle">Édition Standard</h3>
+            <p class="edition-target" data-i18n="editions.freeTarget">Pour les particuliers & usage personnel</p>
+            <div class="edition-price">
+              <span class="price-val" data-i18n="editions.freePrice">0 €</span>
+              <span class="price-type" data-i18n="editions.freePriceType">Gratuit à vie</span>
+            </div>
+          </div>
+          <ul class="edition-features">
+            <li><span class="check">✓</span> <span data-i18n="editions.f_free1">LLM 100% local (Llama.cpp & Ollama)</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_free2">Chat rapide en bulle flottante & barre</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_free3">Extraction de texte basique</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_free4">Recherche Web anti-hallucination</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_free5">Rendu Markdown & Formules LaTeX</span></li>
+          </ul>
+          <div class="edition-footer">
+            <a href="#download" class="btn btn-secondary btn-block" data-i18n="editions.btnFree">Télécharger Gratuitement</a>
+          </div>
+        </div>
+
+        <!-- 2. LITE Edition -->
+        <div class="edition-card lite-card">
+          <div class="edition-badge" data-i18n="editions.liteBadge">Professionnels</div>
+          <div class="edition-header">
+            <div class="edition-icon">🚀</div>
+            <h3 class="edition-name" data-i18n="editions.liteTitle">Édition LITE</h3>
+            <p class="edition-target" data-i18n="editions.liteTarget">Pour indépendants, cadres & experts</p>
+            <div class="edition-price">
+              <span class="price-val" data-i18n="editions.litePrice">Licence Fixe</span>
+              <span class="price-type" data-i18n="editions.lifetime">Activation à vie (HWID)</span>
+            </div>
+          </div>
+          <ul class="edition-features">
+            <li><span class="check">✓</span> <strong data-i18n="editions.f_lite_all">Tout ce qui est dans Standard, plus :</strong></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_lite1">Analyse avancée Excel multi-feuilles (.xlsx, .csv)</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_lite2">Parsing Word (.docx) & PDF volumineux illimité</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_lite3">Chat Vocal haute définition (Whisper + TTS)</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_lite4">Vector DB & RAG sémantique local illimité</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_lite5">Multi-profils isolés avec mot de passe & clé de secours</span></li>
+          </ul>
+          <div class="edition-footer">
+            <a href="https://wa.me/?text=Bonjour,%20je%20souhaite%20commander%20une%20licence%20AI%20Widget%20LITE" target="_blank" class="btn btn-primary btn-block" data-i18n="editions.btnLite">Activer la Licence LITE</a>
+          </div>
+        </div>
+
+        <!-- 3. PRO ENTREPRISE -->
+        <div class="edition-card pro-card">
+          <div class="edition-badge pro-badge" data-i18n="editions.proBadge">Entreprise & Réseau</div>
+          <div class="edition-header">
+            <div class="edition-icon">👑</div>
+            <h3 class="edition-name" data-i18n="editions.proTitle">PRO Entreprise</h3>
+            <p class="edition-target" data-i18n="editions.proTarget">PME, ETI, Cabinets & Administrateurs IT</p>
+            <div class="edition-price">
+              <span class="price-val" data-i18n="editions.proPrice">Sur Mesure</span>
+              <span class="price-type" data-i18n="editions.proPriceType">Déploiement Multipostes</span>
+            </div>
+          </div>
+          <ul class="edition-features">
+            <li><span class="check">✓</span> <strong data-i18n="editions.f_pro_all">Toutes les fonctionnalités LITE, plus :</strong></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_pro1">Package MSI (.msi) & Déploiement silencieux (GPO / SCCM)</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_pro2">Politiques de Groupe IT & Verrouillage de conformité (Lockdown)</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_pro3">Serveur IA Centralisé & RAG d'Entreprise partagé en réseau</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_pro4">Console d'administration : gestion des utilisateurs & quotas</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_pro5">Conformité RGPD On-Premise 100% étanche (Air-Gapped ready)</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_pro6">Support technique dédié & accompagnement intégration</span></li>
+          </ul>
+          <div class="edition-footer">
+            <a href="mailto:s.h.a.dev.pro@gmail.com?subject=Demande%20Licence%20AI%20Widget%20PRO%20Entreprise" class="btn btn-pro btn-block" data-i18n="editions.btnPro">Contacter le Service Entreprise</a>
+          </div>
         </div>
       </div>
     </div>
