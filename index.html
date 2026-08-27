@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Widget — L'Assistant IA de Bureau Ultime & 100% Local</title>
   <meta name="description" content="AI Widget est un assistant IA de bureau révolutionnaire pour Windows. Confidentialité totale, LLM local, analyse de documents Excel/PDF, recherche web et voix." />
+  <link rel="icon" type="image/png" href="icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
@@ -15,16 +16,15 @@
   <header class="navbar">
     <div class="nav-container">
       <div class="brand">
-        <div class="brand-logo">⚡</div>
+        <img src="icon.png" alt="AI Widget Logo" class="brand-logo-img" />
         <span class="brand-name">AI Widget</span>
         <span class="brand-badge">v1.0.1</span>
       </div>
 
       <nav class="nav-links">
         <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
-        <a href="#documents" data-i18n="nav.documents">Documents</a>
+        <a href="#preview" data-i18n="nav.documents">Aperçu</a>
         <a href="#download" data-i18n="nav.download">Télécharger</a>
-        <a href="#specs" data-i18n="nav.specs">Configuration</a>
       </nav>
 
       <div class="nav-actions">
@@ -33,7 +33,7 @@
           <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
           <button class="lang-btn" data-lang="ar">🌐 العربية</button>
         </div>
-        <a href="#download" class="btn btn-primary" data-i18n="nav.getApp">Obtenir l'application</a>
+        <a href="#download" class="btn btn-primary" data-i18n="nav.getApp">Télécharger</a>
       </div>
     </div>
   </header>
@@ -91,7 +91,7 @@
   </section>
 
   <!-- Interactive Widget Preview -->
-  <section class="preview-section">
+  <section class="preview-section" id="preview">
     <div class="container">
       <div class="mockup-window">
         <div class="mockup-topbar">
@@ -111,7 +111,7 @@
               </div>
             </div>
             <div class="chat-msg bot">
-              <div class="msg-avatar">⚡</div>
+              <img src="icon.png" alt="Bot Icon" class="msg-avatar-img" />
               <div class="msg-bubble">
                 <p data-i18n="mockup.botIntro">Voici la synthèse financière extraite du tableau Excel joint :</p>
                 <table class="mockup-table">
@@ -140,7 +140,7 @@
                       <td><strong>MONTANT GLOBAL</strong></td>
                       <td><strong>165 650,00 €</strong></td>
                       <td>-</td>
-                      <td><strong style="color:#10b981;">198 780,00 € TTC</strong></td>
+                      <td><strong style="color:#059669;">198 780,00 € TTC</strong></td>
                     </tr>
                   </tbody>
                 </table>
@@ -212,7 +212,7 @@
         <!-- Setup NSIS -->
         <div class="download-card primary">
           <div class="download-badge" data-i18n="download.recommended">Recommandé</div>
-          <div class="download-card-icon">⚡</div>
+          <img src="icon.png" alt="Setup" class="download-card-img" />
           <h3 class="download-card-title">Installateur Standard</h3>
           <p class="download-card-desc">Installation automatique avec raccourcis bureau et menu démarrer.</p>
           <div class="download-file-info">AI-Widget-Setup.exe · 8.9 Mo</div>
@@ -251,14 +251,13 @@
     <div class="container footer-content">
       <div class="footer-brand">
         <div class="brand">
-          <span class="brand-logo">⚡</span>
+          <img src="icon.png" alt="AI Widget Logo" class="brand-logo-img" />
           <span class="brand-name">AI Widget</span>
         </div>
         <p class="footer-tagline">Conçu avec passion par <strong>S.H.A dev</strong>. Tous droits réservés 2026.</p>
       </div>
       <div class="footer-links">
-        <a href="https://github.com/ShaDevPro/AiWidget" target="_blank">GitHub</a>
-        <a href="mailto:s.h.a.dev.pro@gmail.com">Support & Contact</a>
+        <a href="mailto:s.h.a.dev.pro@gmail.com" class="footer-contact-link">📧 Support & Contact : s.h.a.dev.pro@gmail.com</a>
       </div>
     </div>
   </footer>
