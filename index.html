@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Widget — L'Assistant IA de Bureau Ultime & 100% Local</title>
-  <meta name="description" content="AI Widget est un assistant IA de bureau révolutionnaire pour Windows. Confidentialité totale, LLM local, analyse de documents Excel/PDF, recherche web et voix." />
+  <meta name="description" content="AI Widget est un assistant IA de bureau pour Windows. Version LITE 100% gratuite et version PRO Entreprise pour réseau local." />
   <link rel="icon" type="image/png" href="icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,7 +24,7 @@
       <nav class="nav-links">
         <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
         <a href="#preview" data-i18n="nav.preview">Aperçu</a>
-        <a href="#editions" data-i18n="nav.editions">Éditions & Licences</a>
+        <a href="#editions" data-i18n="nav.editions">Éditions LITE & PRO</a>
         <a href="#download" data-i18n="nav.download">Télécharger</a>
       </nav>
 
@@ -34,7 +34,7 @@
           <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
           <button class="lang-btn" data-lang="ar">🌐 العربية</button>
         </div>
-        <a href="#download" class="btn btn-primary" data-i18n="nav.getApp">Télécharger</a>
+        <a href="#download" class="btn btn-primary" data-i18n="nav.getApp">Télécharger LITE</a>
       </div>
     </div>
   </header>
@@ -45,7 +45,7 @@
     <div class="container hero-content">
       <div class="hero-tag">
         <span class="hero-tag-icon">🛡️</span>
-        <span data-i18n="hero.tag">100% Hors-Ligne & Données Sécurisées</span>
+        <span data-i18n="hero.tag">Version LITE 100% Gratuite & Données Sécurisées</span>
       </div>
 
       <h1 class="hero-title" data-i18n="hero.title">
@@ -61,15 +61,15 @@
         <a href="https://github.com/ShaDevPro/AiWidget/releases/download/v1.0.1/AI-Widget-Setup.exe" class="btn btn-hero btn-hero-primary" id="mainDownloadBtn">
           <span class="btn-icon">📥</span>
           <div class="btn-text">
-            <span class="btn-main" data-i18n="hero.downloadExe">Télécharger pour Windows</span>
-            <span class="btn-sub" data-i18n="hero.downloadExeSub">Setup.exe · 8.9 Mo · Gratuit</span>
+            <span class="btn-main" data-i18n="hero.downloadExe">Télécharger LITE (Gratuit)</span>
+            <span class="btn-sub" data-i18n="hero.downloadExeSub">Setup.exe · 8.9 Mo · Sans Licence</span>
           </div>
         </a>
         <a href="#editions" class="btn btn-hero btn-hero-secondary">
-          <span class="btn-icon">👑</span>
+          <span class="btn-icon">🏢</span>
           <div class="btn-text">
-            <span class="btn-main" data-i18n="hero.seeEditions">Découvrir les Éditions</span>
-            <span class="btn-sub" data-i18n="hero.seeEditionsSub">Standard · LITE · PRO Entreprise</span>
+            <span class="btn-main" data-i18n="hero.seeEditions">Découvrir l'Offre PRO Entreprise</span>
+            <span class="btn-sub" data-i18n="hero.seeEditionsSub">Serveur Réseau & Déploiement IT</span>
           </div>
         </a>
       </div>
@@ -193,94 +193,72 @@
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">👑</div>
-          <h3 class="feature-title" data-i18n="f6.title">Licence & Multi-Profils Sécurisés</h3>
-          <p class="feature-desc" data-i18n="f6.desc">Gestion des profils isolés, chiffrement SQLite local et activation à vie sans abonnement mensuel.</p>
+          <div class="feature-icon">👥</div>
+          <h3 class="feature-title" data-i18n="f6.title">Multi-Profils & Chiffrement</h3>
+          <p class="feature-desc" data-i18n="f6.desc">Espaces de travail isolés avec mot de passe personnel, chiffrement SQLite local et clé de sécurité master.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Editions & Pricing Section -->
+  <!-- Editions Section (2-Columns: LITE vs PRO Entreprise) -->
   <section class="editions-section" id="editions">
     <div class="container">
       <div class="section-header">
         <div class="hero-tag" style="background:#eff6ff;border-color:#bfdbfe;color:#2563eb;">
-          <span data-i18n="editions.badge">💎 Gamme Complète</span>
+          <span data-i18n="editions.badge">💎 Comparatif des Éditions</span>
         </div>
-        <h2 class="section-title" data-i18n="editions.title">Choisissez l'Édition Adaptée à Vos Besoins</h2>
-        <p class="section-desc" data-i18n="editions.desc">De l'usage personnel quotidien au déploiement d'entreprise à grande échelle.</p>
+        <h2 class="section-title" data-i18n="editions.title">Choisissez Votre Édition AI Widget</h2>
+        <p class="section-desc" data-i18n="editions.desc">La version LITE est 100% gratuite et autonome. La version PRO Entreprise active l'infrastructure serveur réseau.</p>
       </div>
 
-      <div class="editions-grid">
-        <!-- 1. Standard Free -->
-        <div class="edition-card">
+      <div class="editions-grid two-cols">
+        <!-- 1. LITE Edition (100% Free & No License Required) -->
+        <div class="edition-card lite-card">
+          <div class="edition-badge" data-i18n="editions.liteBadge">Gratuit à vie</div>
           <div class="edition-header">
             <div class="edition-icon">⚡</div>
-            <h3 class="edition-name" data-i18n="editions.freeTitle">Édition Standard</h3>
-            <p class="edition-target" data-i18n="editions.freeTarget">Pour les particuliers & usage personnel</p>
-            <div class="edition-price">
-              <span class="price-val" data-i18n="editions.freePrice">0 €</span>
-              <span class="price-type" data-i18n="editions.freePriceType">Gratuit à vie</span>
-            </div>
-          </div>
-          <ul class="edition-features">
-            <li><span class="check">✓</span> <span data-i18n="editions.f_free1">LLM 100% local (Llama.cpp & Ollama)</span></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_free2">Chat rapide en bulle flottante & barre</span></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_free3">Extraction de texte basique</span></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_free4">Recherche Web anti-hallucination</span></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_free5">Rendu Markdown & Formules LaTeX</span></li>
-          </ul>
-          <div class="edition-footer">
-            <a href="#download" class="btn btn-secondary btn-block" data-i18n="editions.btnFree">Télécharger Gratuitement</a>
-          </div>
-        </div>
-
-        <!-- 2. LITE Edition -->
-        <div class="edition-card lite-card">
-          <div class="edition-badge" data-i18n="editions.liteBadge">Professionnels</div>
-          <div class="edition-header">
-            <div class="edition-icon">🚀</div>
             <h3 class="edition-name" data-i18n="editions.liteTitle">Édition LITE</h3>
-            <p class="edition-target" data-i18n="editions.liteTarget">Pour indépendants, cadres & experts</p>
+            <p class="edition-target" data-i18n="editions.liteTarget">Pour particuliers, professionnels indépendants & experts</p>
             <div class="edition-price">
-              <span class="price-val" data-i18n="editions.litePrice">Licence Fixe</span>
-              <span class="price-type" data-i18n="editions.lifetime">Activation à vie (HWID)</span>
+              <span class="price-val" data-i18n="editions.litePrice">0 € (Gratuit)</span>
+              <span class="price-type" data-i18n="editions.litePriceType">Aucune licence requise · Utilisation illimitée</span>
             </div>
           </div>
           <ul class="edition-features">
-            <li><span class="check">✓</span> <strong data-i18n="editions.f_lite_all">Tout ce qui est dans Standard, plus :</strong></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_lite1">Analyse avancée Excel multi-feuilles (.xlsx, .csv)</span></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_lite2">Parsing Word (.docx) & PDF volumineux illimité</span></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_lite3">Chat Vocal haute définition (Whisper + TTS)</span></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_lite4">Vector DB & RAG sémantique local illimité</span></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_lite5">Multi-profils isolés avec mot de passe & clé de secours</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_lite1">LLM 100% local (Llama.cpp, Ollama, Qwen, Mistral)</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_lite2">Analyse complète Excel (.xlsx multi-feuilles, .csv)</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_lite3">Extraction Word (.docx), PDF volumineux & OCR</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_lite4">Recherche Web anti-hallucination avec citations</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_lite5">Chat Vocal haute définition (Whisper + TTS)</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_lite6">Vector DB & RAG sémantique local illimité</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_lite7">Multi-profils sécurisés avec mot de passe local</span></li>
           </ul>
           <div class="edition-footer">
-            <a href="https://wa.me/?text=Bonjour,%20je%20souhaite%20commander%20une%20licence%20AI%20Widget%20LITE" target="_blank" class="btn btn-primary btn-block" data-i18n="editions.btnLite">Activer la Licence LITE</a>
+            <a href="#download" class="btn btn-primary btn-block" data-i18n="editions.btnLite">Télécharger Gratuitement</a>
           </div>
         </div>
 
-        <!-- 3. PRO ENTREPRISE -->
+        <!-- 2. PRO ENTREPRISE (Server Edition with License) -->
         <div class="edition-card pro-card">
-          <div class="edition-badge pro-badge" data-i18n="editions.proBadge">Entreprise & Réseau</div>
+          <div class="edition-badge pro-badge" data-i18n="editions.proBadge">Version Serveur & Réseau</div>
           <div class="edition-header">
             <div class="edition-icon">👑</div>
             <h3 class="edition-name" data-i18n="editions.proTitle">PRO Entreprise</h3>
-            <p class="edition-target" data-i18n="editions.proTarget">PME, ETI, Cabinets & Administrateurs IT</p>
+            <p class="edition-target" data-i18n="editions.proTarget">Pour entreprises, équipes, parcs informatiques & serveurs locaux</p>
             <div class="edition-price">
-              <span class="price-val" data-i18n="editions.proPrice">Sur Mesure</span>
-              <span class="price-type" data-i18n="editions.proPriceType">Déploiement Multipostes</span>
+              <span class="price-val" data-i18n="editions.proPrice">Licence Entreprise</span>
+              <span class="price-type" data-i18n="editions.proPriceType">Activation par clé de licence sécurisée (HWID)</span>
             </div>
           </div>
           <ul class="edition-features">
             <li><span class="check">✓</span> <strong data-i18n="editions.f_pro_all">Toutes les fonctionnalités LITE, plus :</strong></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_pro1">Package MSI (.msi) & Déploiement silencieux (GPO / SCCM)</span></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_pro2">Politiques de Groupe IT & Verrouillage de conformité (Lockdown)</span></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_pro3">Serveur IA Centralisé & RAG d'Entreprise partagé en réseau</span></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_pro4">Console d'administration : gestion des utilisateurs & quotas</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_pro1">Serveur IA Centralisé & RAG d'Entreprise partagé en réseau</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_pro2">Package MSI d'entreprise pour déploiement silencieux (GPO / SCCM)</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_pro3">Politiques de Groupe IT & Verrouillage de conformité (Lockdown)</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_pro4">Console d'administration : gestion des comptes & quotas de tokens</span></li>
             <li><span class="check">✓</span> <span data-i18n="editions.f_pro5">Conformité RGPD On-Premise 100% étanche (Air-Gapped ready)</span></li>
-            <li><span class="check">✓</span> <span data-i18n="editions.f_pro6">Support technique dédié & accompagnement intégration</span></li>
+            <li><span class="check">✓</span> <span data-i18n="editions.f_pro6">Support technique prioritaire & accompagnement à l'intégration</span></li>
           </ul>
           <div class="edition-footer">
             <a href="mailto:s.h.a.dev.pro@gmail.com?subject=Demande%20Licence%20AI%20Widget%20PRO%20Entreprise" class="btn btn-pro btn-block" data-i18n="editions.btnPro">Contacter le Service Entreprise</a>
@@ -303,9 +281,9 @@
         <div class="download-card primary">
           <div class="download-badge" data-i18n="download.recommended">Recommandé</div>
           <img src="icon.png" alt="Setup" class="download-card-img" />
-          <h3 class="download-card-title" data-i18n="download.setupTitle">Installateur Standard</h3>
+          <h3 class="download-card-title" data-i18n="download.setupTitle">Installateur Standard LITE</h3>
           <p class="download-card-desc" data-i18n="download.setupDesc">Installation automatique avec raccourcis bureau et menu démarrer.</p>
-          <div class="download-file-info">AI-Widget-Setup.exe · 8.9 Mo</div>
+          <div class="download-file-info">AI-Widget-Setup.exe · 8.9 Mo · Gratuit</div>
           <a href="https://github.com/ShaDevPro/AiWidget/releases/download/v1.0.1/AI-Widget-Setup.exe" class="btn btn-primary btn-block">
             <span data-i18n="download.btnExe">📥 Télécharger (.exe)</span>
           </a>
@@ -315,7 +293,7 @@
         <div class="download-card">
           <div class="download-card-icon">🏢</div>
           <h3 class="download-card-title" data-i18n="download.msiTitle">Pack Entreprise (MSI)</h3>
-          <p class="download-card-desc" data-i18n="download.msiDesc">Idéal pour les administrateurs système et déploiements réseau (GPO / SCCM).</p>
+          <p class="download-card-desc" data-i18n="download.msiDesc">Package d'installation Windows pour administrateurs réseau (GPO / SCCM).</p>
           <div class="download-file-info">AI-Widget-Setup.msi · 5.2 Mo</div>
           <a href="https://github.com/ShaDevPro/AiWidget/releases/download/v1.0.1/AI-Widget-Setup.msi" class="btn btn-secondary btn-block">
             <span data-i18n="download.btnMsi">📦 Télécharger (.msi)</span>
@@ -325,9 +303,9 @@
         <!-- Portable -->
         <div class="download-card">
           <div class="download-card-icon">🚀</div>
-          <h3 class="download-card-title" data-i18n="download.portableTitle">Version Portable</h3>
+          <h3 class="download-card-title" data-i18n="download.portableTitle">Version Portable LITE</h3>
           <p class="download-card-desc" data-i18n="download.portableDesc">Exécutable autonome sans aucune installation requise. Clé USB ready.</p>
-          <div class="download-file-info">AI-Widget-Portable.exe · 21.7 Mo</div>
+          <div class="download-file-info">AI-Widget-Portable.exe · 21.7 Mo · Gratuit</div>
           <a href="https://github.com/ShaDevPro/AiWidget/releases/download/v1.0.1/AI-Widget-Portable.exe" class="btn btn-secondary btn-block">
             <span data-i18n="download.btnPortable">📂 Télécharger Portable</span>
           </a>
