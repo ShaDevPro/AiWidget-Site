@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Widget — L'Assistant IA de Bureau Ultime & 100% Local</title>
+  <meta name="description" content="AI Widget est un assistant IA de bureau révolutionnaire pour Windows. Confidentialité totale, LLM local, analyse de documents Excel/PDF, recherche web et voix." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-logo">⚡</div>
+        <span class="brand-name">AI Widget</span>
+        <span class="brand-badge">v1.0.1</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
+        <a href="#documents" data-i18n="nav.documents">Documents</a>
+        <a href="#download" data-i18n="nav.download">Télécharger</a>
+        <a href="#specs" data-i18n="nav.specs">Configuration</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="fr">🇫🇷 FR</button>
+          <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+          <button class="lang-btn" data-lang="ar">🌐 العربية</button>
+        </div>
+        <a href="#download" class="btn btn-primary" data-i18n="nav.getApp">Obtenir l'application</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-content">
+      <div class="hero-tag">
+        <span class="hero-tag-icon">🛡️</span>
+        <span data-i18n="hero.tag">100% Hors-Ligne & Données Sécurisées</span>
+      </div>
+
+      <h1 class="hero-title" data-i18n="hero.title">
+        L'Intelligence Artificielle <br />
+        <span class="gradient-text">Directement sur votre Bureau</span>
+      </h1>
+
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        Un widget discret, ultra-rapide et tout-en-un. Chattez avec vos modèles LLM locaux, analysez vos devis Excel et documents PDF en un clin d'œil, recherchez sur le Web sans hallucination, et pilotez tout à la voix.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="https://github.com/ShaDevPro/AiWidget/releases/download/v1.0.1/AI-Widget-Setup.exe" class="btn btn-hero btn-hero-primary" id="mainDownloadBtn">
+          <span class="btn-icon">📥</span>
+          <div class="btn-text">
+            <span class="btn-main" data-i18n="hero.downloadExe">Télécharger pour Windows</span>
+            <span class="btn-sub">Setup.exe · 8.9 Mo · Gratuit</span>
+          </div>
+        </a>
+        <a href="#download" class="btn btn-hero btn-hero-secondary">
+          <span class="btn-icon">⚙️</span>
+          <div class="btn-text">
+            <span class="btn-main" data-i18n="hero.otherVersions">Autres formats</span>
+            <span class="btn-sub">MSI Entreprise & Portable</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-val">&lt; 80 Mo</span>
+          <span class="stat-lbl" data-i18n="stats.ram">Consommation RAM</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-val">100%</span>
+          <span class="stat-lbl" data-i18n="stats.privacy">Confidentialité locale</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-val">0.0s</span>
+          <span class="stat-lbl" data-i18n="stats.latency">Latence cloud</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Widget Preview -->
+  <section class="preview-section">
+    <div class="container">
+      <div class="mockup-window">
+        <div class="mockup-topbar">
+          <div class="mockup-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mockup-title">AI Widget — Mode Étendu (ChatGPT-Style)</div>
+          <div class="mockup-badge">✓ Modèle Qwen 2.5 Local Actif</div>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-chat">
+            <div class="chat-msg user">
+              <div class="msg-avatar">👤</div>
+              <div class="msg-bubble">
+                <div class="msg-chip">📎 Devis 40 logts.xlsx (XLSX)</div>
+                <div data-i18n="mockup.userMsg">Peux-tu extraire le montant total HT et TTC de ce devis Excel ?</div>
+              </div>
+            </div>
+            <div class="chat-msg bot">
+              <div class="msg-avatar">⚡</div>
+              <div class="msg-bubble">
+                <p data-i18n="mockup.botIntro">Voici la synthèse financière extraite du tableau Excel joint :</p>
+                <table class="mockup-table">
+                  <thead>
+                    <tr>
+                      <th>Désignation</th>
+                      <th>Montant HT</th>
+                      <th>Taux TVA</th>
+                      <th>Total TTC</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Lot Gros Œuvre</td>
+                      <td>120 450,00 €</td>
+                      <td>20%</td>
+                      <td>144 540,00 €</td>
+                    </tr>
+                    <tr>
+                      <td>Lot Électricité & CVC</td>
+                      <td>45 200,00 €</td>
+                      <td>20%</td>
+                      <td>54 240,00 €</td>
+                    </tr>
+                    <tr class="highlight-row">
+                      <td><strong>MONTANT GLOBAL</strong></td>
+                      <td><strong>165 650,00 €</strong></td>
+                      <td>-</td>
+                      <td><strong style="color:#10b981;">198 780,00 € TTC</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="features.title">Pourquoi choisir AI Widget ?</h2>
+        <p class="section-desc" data-i18n="features.desc">Une suite d'outils ultra-puissants intégrés dans une interface ergonomique et intuitive.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3 class="feature-title" data-i18n="f1.title">100% Local & Zéro Fuite</h3>
+          <p class="feature-desc" data-i18n="f1.desc">Vos documents, données et conversations ne quittent jamais votre machine. Fonctionne sans connexion Internet.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3 class="feature-title" data-i18n="f2.title">Analyse Excel & PDF Universelle</h3>
+          <p class="feature-desc" data-i18n="f2.desc">Glissez vos fichiers .xlsx, .docx, .pdf ou scans OCR. L'IA extrait les tableaux, calcule les sommes et résume vos dossiers.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🌐</div>
+          <h3 class="feature-title" data-i18n="f3.title">Recherche Web Anti-Hallucination</h3>
+          <p class="feature-desc" data-i18n="f3.desc">Routeur d'intention intelligent qui recherche les faits publics en temps réel avec citation exacte des sources fiables.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎙️</div>
+          <h3 class="feature-title" data-i18n="f4.title">Chat Vocal Whisper & TTS</h3>
+          <p class="feature-desc" data-i18n="f4.desc">Parlez naturellement à votre assistant avec Whisper local et écoutez ses réponses avec des voix neuronales ultra-réalistes.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📈</div>
+          <h3 class="feature-title" data-i18n="f5.title">Diagrammes Mermaid & LaTeX</h3>
+          <p class="feature-desc" data-i18n="f5.desc">Rendu vectoriel direct de formules mathématiques complexes et de diagrammes de flux interactifs.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">👑</div>
+          <h3 class="feature-title" data-i18n="f6.title">Licence & Multi-Profils Sécurisés</h3>
+          <p class="feature-desc" data-i18n="f6.desc">Gestion des profils isolés, chiffrement SQLite local et activation à vie sans abonnement mensuel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section class="download-section" id="download">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="download.title">Télécharger AI Widget pour Windows</h2>
+        <p class="section-desc" data-i18n="download.desc">Compatible Windows 10 & Windows 11 (64-bit). Sans dépendance lourde.</p>
+      </div>
+
+      <div class="download-grid">
+        <!-- Setup NSIS -->
+        <div class="download-card primary">
+          <div class="download-badge" data-i18n="download.recommended">Recommandé</div>
+          <div class="download-card-icon">⚡</div>
+          <h3 class="download-card-title">Installateur Standard</h3>
+          <p class="download-card-desc">Installation automatique avec raccourcis bureau et menu démarrer.</p>
+          <div class="download-file-info">AI-Widget-Setup.exe · 8.9 Mo</div>
+          <a href="https://github.com/ShaDevPro/AiWidget/releases/download/v1.0.1/AI-Widget-Setup.exe" class="btn btn-primary btn-block">
+            <span>📥 Télécharger (.exe)</span>
+          </a>
+        </div>
+
+        <!-- MSI -->
+        <div class="download-card">
+          <div class="download-card-icon">🏢</div>
+          <h3 class="download-card-title">Pack Entreprise (MSI)</h3>
+          <p class="download-card-desc">Idéal pour les administrateurs système et déploiements réseau (GPO / SCCM).</p>
+          <div class="download-file-info">AI-Widget-Setup.msi · 5.2 Mo</div>
+          <a href="https://github.com/ShaDevPro/AiWidget/releases/download/v1.0.1/AI-Widget-Setup.msi" class="btn btn-secondary btn-block">
+            <span>📦 Télécharger (.msi)</span>
+          </a>
+        </div>
+
+        <!-- Portable -->
+        <div class="download-card">
+          <div class="download-card-icon">🚀</div>
+          <h3 class="download-card-title">Version Portable</h3>
+          <p class="download-card-desc">Exécutable autonome sans aucune installation requise. Clé USB ready.</p>
+          <div class="download-file-info">AI-Widget-Portable.exe · 21.7 Mo</div>
+          <a href="https://github.com/ShaDevPro/AiWidget/releases/download/v1.0.1/AI-Widget-Portable.exe" class="btn btn-secondary btn-block">
+            <span>📂 Télécharger Portable</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-logo">⚡</span>
+          <span class="brand-name">AI Widget</span>
+        </div>
+        <p class="footer-tagline">Conçu avec passion par <strong>S.H.A dev</strong>. Tous droits réservés 2026.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/ShaDevPro/AiWidget" target="_blank">GitHub</a>
+        <a href="mailto:s.h.a.dev.pro@gmail.com">Support & Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
