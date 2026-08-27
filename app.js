@@ -1,11 +1,12 @@
 /**
- * AI Widget Showcase Website — Two Editions: LITE (100% Free) & PRO Enterprise (Server License).
+ * AI Widget Showcase Website — With QR Share and 100% i18n.
  */
 const translations = {
   fr: {
     "nav.features": "Fonctionnalités",
     "nav.preview": "Aperçu",
     "nav.editions": "Éditions LITE & PRO",
+    "nav.share": "Partager",
     "nav.download": "Télécharger",
     "nav.getApp": "Télécharger LITE",
     "hero.tag": "Version LITE 100% Gratuite & Données Sécurisées",
@@ -73,6 +74,12 @@ const translations = {
     "editions.f_pro5": "Conformité RGPD On-Premise 100% étanche (Air-Gapped ready)",
     "editions.f_pro6": "Support technique prioritaire & accompagnement à l'intégration",
     "editions.btnPro": "Contacter le Service Entreprise",
+    "share.tag": "Partage Instantané",
+    "share.title": "Partagez AI Widget avec Vos Proches & Équipes",
+    "share.desc": "Faites découvrir la puissance d'une intelligence artificielle 100% locale, sans abonnement et respectueuse de la confidentialité.",
+    "share.scanLabel": "Scannez pour ouvrir le site",
+    "share.copyBtn": "Copier le Lien",
+    "share.copied": "Lien copié dans le presse-papiers !",
     "download.title": "Télécharger AI Widget pour Windows",
     "download.desc": "Compatible Windows 10 & Windows 11 (64-bit). Sans dépendance lourde.",
     "download.recommended": "Recommandé",
@@ -92,6 +99,7 @@ const translations = {
     "nav.features": "Features",
     "nav.preview": "Preview",
     "nav.editions": "LITE & PRO Editions",
+    "nav.share": "Share",
     "nav.download": "Download",
     "nav.getApp": "Download LITE",
     "hero.tag": "100% Free LITE Edition & Private AI",
@@ -159,6 +167,12 @@ const translations = {
     "editions.f_pro5": "100% On-Premise GDPR compliance (Air-Gapped ready)",
     "editions.f_pro6": "Priority technical support & deployment assistance",
     "editions.btnPro": "Contact Enterprise Sales",
+    "share.tag": "Instant Share",
+    "share.title": "Share AI Widget with Colleagues & Friends",
+    "share.desc": "Empower your network with a 100% private, offline, zero-subscription desktop artificial intelligence.",
+    "share.scanLabel": "Scan to open on smartphone",
+    "share.copyBtn": "Copy Link",
+    "share.copied": "Link copied to clipboard!",
     "download.title": "Download AI Widget for Windows",
     "download.desc": "Compatible with Windows 10 & Windows 11 (64-bit). Ultra-lightweight.",
     "download.recommended": "Recommended",
@@ -178,6 +192,7 @@ const translations = {
     "nav.features": "المميزات",
     "nav.preview": "معاينة",
     "nav.editions": "إصدارات LITE و PRO",
+    "nav.share": "مشاركة",
     "nav.download": "تحميل",
     "nav.getApp": "تحميل النسخة المجانية",
     "hero.tag": "نسخة LITE مجانية 100% وخصوصية تامة",
@@ -245,6 +260,12 @@ const translations = {
     "editions.f_pro5": "مطابقة تامة لخصوصية البيانات On-Premise بدون اتصال خارجي",
     "editions.f_pro6": "دعم فني ذو أولوية ومساعدة متكاملة في التثبيت والتكامل",
     "editions.btnPro": "طلب ترخيص للشركات",
+    "share.tag": "مشاركة فورية",
+    "share.title": "شارك AI Widget مع زملائك وفريق عملك",
+    "share.desc": "امنح فريقك قوة الذكاء الاصطناعي المحلي بالكامل دون اشتراكات شهرية ومع الحفاظ المطلق على سرية البيانات.",
+    "share.scanLabel": "امسح الكود لفتح الموقع على الهاتف",
+    "share.copyBtn": "نسخ الرابط",
+    "share.copied": "تم نسخ الرابط إلى الحافظة بنجاح!",
     "download.title": "تحميل AI Widget لنظام Windows",
     "download.desc": "متوافق مع Windows 10 و Windows 11 (64 بت). حجم خفيف للغاية.",
     "download.recommended": "موصى به",
@@ -262,7 +283,10 @@ const translations = {
   }
 };
 
+let currentLang = 'fr';
+
 function setLanguage(lang) {
+  currentLang = lang;
   const dict = translations[lang] || translations.fr;
   document.documentElement.setAttribute('lang', lang);
   document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
@@ -302,7 +326,6 @@ if (mobileMenuBtn && mobileMenu) {
     }
   });
 
-  // Close menu when clicking on any mobile nav link
   mobileMenu.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('open');
@@ -311,5 +334,33 @@ if (mobileMenuBtn && mobileMenu) {
         iconClose.style.display = 'none';
       }
     });
+  });
+}
+
+// Toast notification helper
+function showToast(msg) {
+  const toast = document.getElementById('toastNotification');
+  const toastMsg = document.getElementById('toastMessage');
+  if (toast && toastMsg) {
+    toastMsg.innerText = msg;
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2800);
+  }
+}
+
+// Copy URL logic
+const copyBtn = document.getElementById('copyShareUrlBtn');
+const urlInput = document.getElementById('siteShareUrl');
+if (copyBtn && urlInput) {
+  copyBtn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(urlInput.value);
+      const dict = translations[currentLang] || translations.fr;
+      showToast(dict['share.copied'] || 'Lien copié dans le presse-papiers !');
+    } catch (e) {
+      showToast('Lien copié !');
+    }
   });
 }

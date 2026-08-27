@@ -12,6 +12,12 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toastMessage">Lien copié dans le presse-papiers !</span>
+  </div>
+
   <!-- Header / Navigation -->
   <header class="navbar">
     <div class="nav-container">
@@ -26,6 +32,7 @@
         <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
         <a href="#preview" data-i18n="nav.preview">Aperçu</a>
         <a href="#editions" data-i18n="nav.editions">Éditions LITE & PRO</a>
+        <a href="#share" data-i18n="nav.share">Partager</a>
         <a href="#download" data-i18n="nav.download">Télécharger</a>
       </nav>
 
@@ -38,20 +45,21 @@
         </div>
         <a href="#download" class="btn btn-primary desktop-only" data-i18n="nav.getApp">Télécharger LITE</a>
         
-        <!-- Mobile Menu Toggle Button -->
+        <!-- Mobile Hamburger Button -->
         <button class="mobile-toggle-btn mobile-only" id="mobileMenuBtn" aria-label="Menu">
-          <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-          <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Dropdown Menu -->
+    <!-- Mobile Dropdown Menu (Hidden on PC) -->
     <div class="mobile-menu" id="mobileMenu">
       <nav class="mobile-nav-links">
         <a href="#features" data-i18n="nav.features">Fonctionnalités</a>
         <a href="#preview" data-i18n="nav.preview">Aperçu</a>
         <a href="#editions" data-i18n="nav.editions">Éditions LITE & PRO</a>
+        <a href="#share" data-i18n="nav.share">Partager</a>
         <a href="#download" data-i18n="nav.download">Télécharger</a>
       </nav>
       <div class="mobile-menu-footer">
@@ -301,6 +309,56 @@
           </ul>
           <div class="edition-footer">
             <a href="mailto:s.h.a.dev.pro@gmail.com?subject=Demande%20Licence%20AI%20Widget%20PRO%20Entreprise" class="btn btn-primary btn-block" data-i18n="editions.btnPro">Contacter le Service Entreprise</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QR Code & Instant Share Section -->
+  <section class="share-section" id="share">
+    <div class="container">
+      <div class="share-card">
+        <div class="share-grid">
+          <!-- Left: QR Code Box -->
+          <div class="qr-box-wrapper">
+            <div class="qr-box">
+              <img src="qr-code.png" alt="AI Widget QR Code" class="qr-image" />
+              <div class="qr-badge">
+                <img src="icon.png" alt="Logo" class="qr-logo-overlay" />
+              </div>
+            </div>
+            <span class="qr-scan-label" data-i18n="share.scanLabel">Scannez pour ouvrir le site</span>
+          </div>
+
+          <!-- Right: Share Actions & Info -->
+          <div class="share-content">
+            <div class="hero-tag" style="margin-bottom:12px;">
+              <svg class="mono-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+              <span data-i18n="share.tag">Partage Instantané</span>
+            </div>
+            <h2 class="share-title" data-i18n="share.title">Partagez AI Widget avec Vos Proches & Équipes</h2>
+            <p class="share-desc" data-i18n="share.desc">Faites découvrir la puissance d'une intelligence artificielle 100% locale, sans abonnement et respectueuse de la confidentialité.</p>
+
+            <div class="share-url-box">
+              <input type="text" readonly value="https://shadevpro.github.io/AiWidget-Site/" id="siteShareUrl" class="share-input" />
+              <button class="btn btn-primary" id="copyShareUrlBtn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span data-i18n="share.copyBtn">Copier le Lien</span>
+              </button>
+            </div>
+
+            <div class="share-buttons-row">
+              <a href="https://api.whatsapp.com/send?text=D%C3%A9couvre%20AI%20Widget%20:%20l%27assistant%20IA%20de%20bureau%20100%25%20local%20et%20gratuit%20pour%20Windows%20!%20%F0%9F%9A%80%20https://shadevpro.github.io/AiWidget-Site/" target="_blank" class="share-action-btn whatsapp">
+                <span>💬 WhatsApp</span>
+              </a>
+              <a href="mailto:?subject=D%C3%A9couvre%20AI%20Widget&body=Bonjour,%0A%0AJe%20te%20recommande%20AI%20Widget,%20un%20assistant%20IA%20de%20bureau%20100%25%20local,%20s%C3%A9curis%C3%A9%20et%20gratuit%20pour%20Windows%20:%0Ahttps://shadevpro.github.io/AiWidget-Site/%0A%0A%C3%80%20bient%C3%B4t%20!" class="share-action-btn email">
+                <span>📧 E-mail</span>
+              </a>
+              <a href="https://t.me/share/url?url=https://shadevpro.github.io/AiWidget-Site/&text=AI%20Widget%20-%20Assistant%20IA%20de%20Bureau%20Local" target="_blank" class="share-action-btn telegram">
+                <span>✈️ Telegram</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
